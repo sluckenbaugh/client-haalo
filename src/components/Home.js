@@ -28,7 +28,7 @@ const Home = () => {
                         </div>
                     </div>
                     <WelcomeMessage />
-                    <a href="/test" className='justify-self-center mt-[2rem]'><button name="starttest" value="Take The Halo Test" className="button">Launch the HAALO Inventory</button></a>
+                    <a href="/test" className='justify-self-center mt-[2rem]'><button name="starttest" value="Take The Halo Test" className="button">Launch The HAALO Inventory</button></a>
                 </div>
                 <div className='bg-white px-[4rem] py-[1rem] my-[2rem]  rounded-[8px] grid'>
                     <AboutHAALO />
