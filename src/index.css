@@ -9,6 +9,12 @@
     html {
         font-family: "figtree", "sans-serif";
     }
+
+    .header {
+        color: #12395a;
+        font-size: 32px;
+    }
+
     .step_selected {
         background: #f9c706;
         width: 5rem;
@@ -19,7 +25,6 @@
         align-items: center;
     }
     .step_unselected {
-        /* background: #f9c706; */
         width: 5rem;
         height: 2.5rem;
         border-radius: 2rem;
@@ -29,8 +34,30 @@
     }
     .step_line {
         background: rgb(172, 172, 172);
-        height: 1.2px;
-        width: 11%;
+        height: 1.4px;
+        width: 7%;
     }
+    .question_line {
+        background: rgb(172, 172, 172);
+        height: 1.4px;
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+
+    .button {
+        background: #f0f0f2;
+        padding: 0.7rem 2rem;
+        border-radius: 6px;
+        color: #12395a;
+        font-size: 22px;
+        font-weight: 500;
+        transition: all 100ms;
+    }
+    .button:hover {
+        background: #f9c706;
+    }
+
+
 }
 
