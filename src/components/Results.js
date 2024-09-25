@@ -51,8 +51,9 @@ export default Results;
 const PersonaMeaning = ({ persona }) => {
 
     return (
-        <div className='grid grid-cols-5 justify-center gap-10 mt-[1rem]'>
-            <div className='col-span-3'>
+        <div className='gap-10 mt-[1rem]'>
+            <img className='rounded-[6px] mt-[1rem] mx-auto w-[62%]' src={Cards[persona.name]} alt={`${persona.name} persona card`} />
+            <div className='my-[5rem]'>
                 <h3 className='header'>What Your Persona Means:</h3>
                 <div>
                     {persona.description.map((point, index) => (
@@ -63,7 +64,6 @@ const PersonaMeaning = ({ persona }) => {
                     ))}
                 </div>
             </div>
-            <img className='col-span-2 rounded-[8px] justify-self-end mt-[1rem]' src={Cards[persona.name]} alt={`${persona.name} persona card`} />
         </div>
     )
 }

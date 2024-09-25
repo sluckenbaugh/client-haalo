@@ -138,7 +138,7 @@ const Instructions = () => {
     return (
         <div className='flex flex-col items-center justify-center mt-[1.5rem] mx-[10rem]'>
             <h2 className='header mb-[0.7rem]'>Instructions:</h2>
-            <p className="text-center text-lg">Please select the answer that best aligns with you. If neither answer represents you, choose the one that feels closest to your gut reaction.<br />It typically takes around 10 minutes to complete the inventory.</p>
+            <p className="text-center text-lg max-w-[36rem]">Please select the answer that best aligns with you. If neither answer represents you, choose the one that feels closest to your gut reaction.<br />It typically takes around 10 minutes to complete the inventory.</p>
         </div>   
     )
 }
