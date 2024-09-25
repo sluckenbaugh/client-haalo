@@ -3,6 +3,8 @@ import { useLocation } from 'react-router-dom';
 import Footer from './Footer';
 import Header from './Header';
 import { useEffect } from 'react';
+import Cards from '../services/Cards';
+
 
 
 
@@ -14,12 +16,13 @@ import { useEffect } from 'react';
         window.scrollTo(0, 0)
       }, []);
 
+
     return (
         <div className='bg-companyGray'>
             <Header />
             <main className='px-[6rem]'>
                 <div id="step3" className="bg-white px-[7rem] py-[3rem] my-[1.5rem] rounded-[8px] grid">
-                    <div class="flex justify-between w-[30%] items-center justify-self-center">
+                    <div className="flex justify-between w-[30%] items-center justify-self-center">
                         <div className="step_unselected">
                             <p className='step_num'>Step 1</p>
                         </div>
@@ -46,6 +49,7 @@ import { useEffect } from 'react';
 export default Results;
 
 const PersonaMeaning = ({ persona }) => {
+
     return (
         <div className='grid grid-cols-5 justify-center gap-10 mt-[1rem]'>
             <div className='col-span-3'>
@@ -59,7 +63,7 @@ const PersonaMeaning = ({ persona }) => {
                     ))}
                 </div>
             </div>
-            <img className='col-span-2 rounded-[8px] justify-self-end mt-[1rem]' src={`https://haalo.avenica.com/_img/cards/v2/${persona.name}.png`} alt="" />
+            <img className='col-span-2 rounded-[8px] justify-self-end mt-[1rem]' src={Cards[persona.name]} alt={`${persona.name} persona card`} />
         </div>
     )
 }

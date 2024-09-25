@@ -4,8 +4,6 @@ import Header from './Header.js';
 import laptop from '../_img/laptop.jpg'
 
 const Home = () => {
-    // const images = require.context('../_img/cards/v2', true);
-    // const imageList = images.keys().map(image => images(image));
     
     return (
         <div className='bg-companyGray'>

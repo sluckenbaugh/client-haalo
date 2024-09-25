@@ -78,7 +78,7 @@ const Questions = () => {
             <main className='px-[6rem]'>
                     <div id="step2" className="bg-white px-[7rem] py-[3rem] my-[1.5rem] rounded-[8px] grid">
                         <div className='flex justify-center'>
-                            <div class="flex justify-between w-[30%] items-center">
+                            <div className="flex justify-between w-[30%] items-center">
                                 <div className="step_unselected">
                                     <p className='step_num'>Step 1</p>
                                 </div>
