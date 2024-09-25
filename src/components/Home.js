@@ -83,8 +83,8 @@ const AboutHAALO = () => {
                     </ul>
                 </div>
                 <grid className='justify-self-end'>
-                    <img className='rounded-[6px] w-[550px] mb-[5rem] ' src={Innovator}></img>
-                    <img className='rounded-[6px] w-[550px]' src={Playmaker}></img>
+                    <img className='rounded-[6px] w-[550px] mb-[5rem] ' src={Innovator} alt='Innovator Persona Card'></img>
+                    <img className='rounded-[6px] w-[550px]' src={Playmaker} alt='Playmaker Persona Card'></img>
                 </grid>
                 {/* <img className='w-[100%] justify-self-end rounded-[40px]' src={laptop}></img> */}
             </div>
