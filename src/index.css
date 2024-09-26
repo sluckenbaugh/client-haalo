@@ -14,6 +14,8 @@
         color: #12395a;
         font-size: 32px;
     }
+    
+    /* Steps */
 
     .step_selected {
         background: #f9c706;
@@ -51,6 +53,35 @@
         width: 100%;
         margin: 2rem 0;
     }
+
+    /* Name inputs */
+
+    .question {
+        display: grid;
+        margin-bottom: 1rem;
+    }
+    .input {
+        margin-top: 0.2rem;
+        border: 1px solid rgb(190, 190, 190);
+        border-radius: 4px;
+        height: 2rem;
+    }
+
+    @media  screen and (min-width: 430px) {
+        .input {
+            width: 365px;
+        }
+        .question {
+            justify-self: center;
+        }
+    }
+    /* @media screen and (min-width: 768px) {
+        .question {
+            justify-self: start;
+        }
+    } */
+
+    /* Buttons */
 
 
     .button {

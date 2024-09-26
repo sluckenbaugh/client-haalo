@@ -6,10 +6,7 @@ import Innovator from '../_img/cards/v2/Innovator.png'
 import Playmaker from '../_img/cards/v2/Playmaker.png'
 import Operative from '../_img/cards/v2/Operative.png'
 import Maverick from '../_img/cards/v2/Maverick.png'
-import Mercenary from '../_img/cards/v2/Mercenary.png'
-import Closer from '../_img/cards/v2/Closer.png'
-import Captain from '../_img/cards/v2/Captain.png'
-import Entrepreneur from '../_img/cards/v2/Entrepreneur.png'
+
 
 const Home = () => {
     
