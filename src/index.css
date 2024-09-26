@@ -17,7 +17,7 @@
 
     .step_selected {
         background: #f9c706;
-        width: 5rem;
+        width: 3.7rem;
         height: 2.5rem;
         border-radius: 2rem;
         display: flex;
@@ -25,12 +25,20 @@
         align-items: center;
     }
     .step_unselected {
-        width: 5rem;
+        width: 3.7rem;
         height: 2.5rem;
         border-radius: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    @media screen and (min-width: 768px) {
+        .step_selected {
+            width: 5rem;
+        }
+        .step_unselected {
+            width: 5rem;
+        }
     }
     .step_line {
         background: rgb(172, 172, 172);
@@ -47,17 +55,23 @@
 
     .button {
         background: #f0f0f2;
-        padding: 0.7rem 2rem;
+        padding: 0.7rem 1rem;
         border-radius: 6px;
+        font-size: 18px;
         color: #12395a;
-        font-size: 22px;
         font-weight: 500;
         transition: all 100ms;
     }
     .button:hover {
         background: #f9c706;
     }
+    
+    @media screen and (min-width: 768px) {
+        .button {
+            font-size: 22px;
+            padding: 0.7rem 2rem;
 
-
+        }
+    }
 }
 
