@@ -4,6 +4,10 @@ import * as PersonaService from '../services/PersonaService'
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer.js'
 import Header from './Header.js';
+import submitHAALOToAirTable from '../APIs/airtable.js';
+import submitHAALOToCrelate from '../APIs/crelate.js';
+import { ADHOCRACY, COMMUNITY, HIERARCHY, MARKET } from '../JSON/haaloObjects.js';
+
 
 const Questions = () => {
     const [choices, setChoices] = useState(() => {
@@ -21,6 +25,7 @@ const Questions = () => {
         lastName: ''
     });
     const [yourEmail, setYourEmail] = useState('');
+    // const [cap, setCap] = useState('')
 
     const handleNameChange = (e) => {
         if (e.target.name === "firstName")  {
@@ -60,14 +65,31 @@ const Questions = () => {
 
     const navigate = useNavigate()
 
-    const takeToResults = (e) => {
+    const takeToResults = async (e) => {
         e.preventDefault()
-        // if (answeredAllQuestions()) {
-        //     const persona = PersonaService.findPersona(choices)
-        //     navigate('/results', { state: { persona } })
-        // }
         if (answeredAllQuestions() && validEmail() && yourName.firstName !== '' && yourName.lastName !== '') {
+            const user = {firstName: yourName.firstName[0].toUpperCase() + yourName.firstName.slice(1), 
+            lastName: yourName.lastName[0].toUpperCase() + yourName.lastName.slice(1), email: yourEmail}
+
             const persona = PersonaService.findPersona(choices)
+
+            // Get scores
+            const percentages = PersonaService.getPercentages(choices)
+            const array = Object.keys(percentages).map(key => `${key}= ${(percentages[key].toPrecision(2).substring(2, 4))}%`)
+            const scores = array.join(' | ')
+
+            // Get culture
+            const arr = Object.values(percentages)
+            const max = arr.indexOf(Math.max(...arr))
+            let culture = ''
+            if (max === 0) culture = `${ADHOCRACY.name} - ${ADHOCRACY.description}`
+            else if (max === 1) culture = `${HIERARCHY.name} - ${HIERARCHY.description}`
+            else if (max === 2) culture = `${COMMUNITY.name} - ${COMMUNITY.description}`
+            else culture = `${MARKET.name} - ${MARKET.description}`
+            
+            submitHAALOToAirTable(user, persona, scores, culture)
+            submitHAALOToCrelate(user, persona, scores, culture, percentages)
+            
             navigate('/results', { state: { persona } })
         }
     }
