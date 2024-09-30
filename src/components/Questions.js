@@ -87,12 +87,12 @@ const Questions = () => {
             else if (max === 2) culture = `${COMMUNITY.name} - ${COMMUNITY.description}`
             else culture = `${MARKET.name} - ${MARKET.description}`
             
-            submitHAALOToAirTable(user, persona, scores, culture)
-            submitHAALOToCrelate(user, persona, scores, culture, percentages)
+            // submitHAALOToAirTable(user, persona, scores, culture)
+            // submitHAALOToCrelate(user, persona, scores, culture, percentages)
             
             navigate('/results', { state: { persona } })
-        }
-    }
+        }   
+    }   
 
     return (
         <div className='bg-companyGray'>
@@ -138,7 +138,7 @@ const Questions = () => {
                                 <div className="text-lg" key={index}>
                                     <p className='text-xl mb-[0.5rem] mt-[1rem]'>{`Question ${index + 1}:`}</p>
                                         {question.options.map((option, optIndex) => (
-                                            <div key={optIndex} onClick={() => handleResponseChange(option, optIndex, index)}>
+                                            <div key={optIndex} className='mb-[0.8rem] md:mb-[0.4rem]' onClick={() => handleResponseChange(option, optIndex, index)}>
                                                 <input className='mr-[0.6rem]' type="radio" required="required" name={`question${index+1}`}/>
                                                 <label>{option.statement}</label>
                                             </div>
