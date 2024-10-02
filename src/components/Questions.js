@@ -132,7 +132,7 @@ const Questions = () => {
                                 <input className='input' type="text" required="required"  onChange={handleNameChange} id="lastName" name="lastName" />
                             </div>
                             <div className="question mb-[2.5rem]">
-                                <label htmlFor="email">Your Email</label>
+                                <label htmlFor="email">Email Address</label>
                                 <input className='input' type="text" required="required" value={yourEmail} onChange={handleEmailChange} id="email" name="email" />
                             </div>
                             <h3 className='text-companyBlue text-[28px] mb-[1rem] mx-[0.5rem] md:mx-[5rem] text-center'>Choose the answer that best descibes you.</h3>

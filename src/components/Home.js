@@ -87,10 +87,10 @@ const AboutHAALO = () => {
                     </ul>
                 </div>
                 <div className='justify-self-end'>
-                    <img className='rounded-[6px] w-[550px] mb-[5rem] hidden lg:block ' src={Innovator} alt='Innovator Persona Card'></img>
+                    <img className='rounded-[6px] w-[550px] mb-[5rem] hidden lg:block' src={Innovator} alt='Innovator Persona Card'></img>
                     <img className='rounded-[6px] w-[550px] mb-[5rem] hidden lg:block' src={Playmaker} alt='Playmaker Persona Card'></img>
-                    <img className='rounded-[6px] w-[550px] mb-[5rem] hidden lg:block ' src={Operative} alt='Playmaker Persona Card'></img>
-                    <img className='rounded-[6px] w-[550px] mb-[5rem] hidden lg:block xl:hidden ' src={Maverick} alt='Playmaker Persona Card'></img>
+                    <img className='rounded-[6px] w-[550px] mb-[5rem] hidden lg:block 2xl:hidden' src={Operative} alt='Playmaker Persona Card'></img>
+                    <img className='rounded-[6px] w-[550px] mb-[5rem] hidden lg:block xl:hidden' src={Maverick} alt='Playmaker Persona Card'></img>
                 </div>
                 {/* <img className='w-[100%] justify-self-end rounded-[40px]' src={laptop}></img> */}
             </div>
