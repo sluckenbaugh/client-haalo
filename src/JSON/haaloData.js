@@ -20,7 +20,7 @@ const haaloData = [
                 "associatedLetter": "C"
             },
             {
-                "statement": "I thrive in a independent creative enviornment",
+                "statement": "I thrive in a independent creative environment",
                 "associatedLetter": "A"
             }
         ]
