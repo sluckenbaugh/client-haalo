@@ -24,7 +24,7 @@ import Cards from '../services/Cards';
             <div id="step1" className=" bg-white md:px-[7rem] py-[3rem] md:my-[1.5rem] md:rounded-[8px] grid">
                     <div className='flex justify-center'>
                         <div className="flex justify-between w-[16rem] md:w-[20rem] items-center">
-                            <div className="step_selected">
+                            <div className="step_unselected">
                                 <p className='step_num'>Step 1</p>
                             </div>
                             <div className="step_line" />
@@ -32,7 +32,7 @@ import Cards from '../services/Cards';
                                 <p className='step_num'>Step 2</p>
                             </div>
                             <div className="step_line" />
-                            <div className="step_unselected">
+                            <div className="step_selected">
                                 <p className='step_num'>Step 3</p>
                             </div>
                         </div>
