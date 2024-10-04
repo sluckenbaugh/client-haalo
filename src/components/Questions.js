@@ -149,10 +149,10 @@ const Questions = () => {
                                 </div>
                             ))}
 
-                            {/* site key for haalo.avenica.com: 6Lc-qPUpAAAAAPtuGFuylayUzDm4WmPC_SGOmc16 */}
+                            {/* site key for usaa-haalo.avenica.com: 6Lft_FcqAAAAAEMtkjg0QqVJVtknzSxQfDQXiTHx */}
                             {/* site key for localhost: 6LdXqvUpAAAAAJAHAwwNNuCIVAcr29_JuXXI6IfP */}
 
-                            <ReCAPTCHA className='mx-auto mb-[1.5rem]' sitekey='6Lc-qPUpAAAAAPtuGFuylayUzDm4WmPC_SGOmc16' required="required" onChange={(val) => setCap(val)}/>
+                            <ReCAPTCHA className='mx-auto mb-[1.5rem]' sitekey='6Lft_FcqAAAAAEMtkjg0QqVJVtknzSxQfDQXiTHx' required="required" onChange={(val) => setCap(val)}/>
                             <button className='button justify-self-center' type='submit'>Discover My Persona</button>
                         </form>
                     </div>

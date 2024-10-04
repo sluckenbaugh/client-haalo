@@ -72,12 +72,12 @@ const AboutHAALO = () => {
                         <li className='mb-[1rem]'><b>Consultant</b>: A person who provides expert advice professionally.</li>
                         <li className='mb-[1rem]'><b>Counselor</b>: A person trained to give guidance on personal, social, or psychological problems.</li>
                         <li className='mb-[1rem]'><b>Delegate</b>: A person sent or authorized to represent others, in particular an elected representative sent to a conference.</li>
-                        <li className='mb-[1rem]'><b>Entrepreneur</b>: A person who organizes and operates a business or businesses, taking on  greater than normal financial risks in order to do so</li>
+                        <li className='mb-[1rem]'><b>Entrepreneur</b>: A person who organizes and operates a business or businesses, taking on  greater than normal financial risks in order to do so.</li>
                         <li className='mb-[1rem]'><b>Envoy</b>: A messenger or representative, especially one on a diplomatic mission.</li>
                         <li className='mb-[1rem]'><b>General</b>: A commander of an army, or an army officer of very high rank.</li>
-                        <li className='mb-[1rem]'><b>Hustler</b>: An aggressively enterprising person; a go-getter</li>
+                        <li className='mb-[1rem]'><b>Hustler</b>: An aggressively enterprising person; a go-getter.</li>
                         <li className='mb-[1rem]'><b>Innovator</b>: A person who introduces new methods, ideas, or products.</li>
-                        <li className='mb-[1rem]'><b>Maverick</b>: An an unorthodox or independent-minded person</li>
+                        <li className='mb-[1rem]'><b>Maverick</b>: An an unorthodox or independent-minded person.</li>
                         <li className='mb-[1rem]'><b>Mercenary</b>: Primarily concerned with making money at the expense of ethics.</li>
                         <li className='mb-[1rem]'><b>Operative</b>: A worker, especially a skilled one.</li>
                         <li className='mb-[1rem]'><b>Playmaker</b>: A player in a team game who leads attacks or brings other players on the same side into a position from which they could score.</li>
