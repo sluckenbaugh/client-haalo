@@ -7,7 +7,7 @@ import Header from './Header.js';
 import submitHAALOToAirTable from '../APIs/airtable.js';
 import submitHAALOToCrelate from '../APIs/crelate.js';
 import { ADHOCRACY, COMMUNITY, HIERARCHY, MARKET } from '../JSON/haaloObjects.js';
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 
 
@@ -27,7 +27,7 @@ const Questions = () => {
         lastName: ''
     });
     const [yourEmail, setYourEmail] = useState('');
-    const [cap, setCap] = useState('')
+    // const [cap, setCap] = useState('')
 
     const handleNameChange = (e) => {
         if (e.target.name === "firstName")  {
@@ -69,7 +69,7 @@ const Questions = () => {
 
     const takeToResults = async (e) => {
         e.preventDefault()
-        if (answeredAllQuestions() && validEmail() && yourName.firstName !== '' && yourName.lastName !== '' && cap) {
+        if (answeredAllQuestions() && validEmail() && yourName.firstName !== '' && yourName.lastName !== '') {
             const user = {firstName: yourName.firstName[0].toUpperCase() + yourName.firstName.slice(1), 
             lastName: yourName.lastName[0].toUpperCase() + yourName.lastName.slice(1), email: yourEmail}
 
@@ -152,7 +152,7 @@ const Questions = () => {
                             {/* site key for usaa-haalo.avenica.com: 6Lft_FcqAAAAAEMtkjg0QqVJVtknzSxQfDQXiTHx */}
                             {/* site key for localhost: 6LdXqvUpAAAAAJAHAwwNNuCIVAcr29_JuXXI6IfP */}
 
-                            <ReCAPTCHA className='mx-auto mb-[1.5rem]' sitekey='6Lft_FcqAAAAAEMtkjg0QqVJVtknzSxQfDQXiTHx' required="required" onChange={(val) => setCap(val)}/>
+                            {/* <ReCAPTCHA className='mx-auto mb-[1.5rem]' sitekey='6Lft_FcqAAAAAEMtkjg0QqVJVtknzSxQfDQXiTHx' required="required" onChange={(val) => setCap(val)}/> */}
                             <button className='button justify-self-center' type='submit'>Discover My Persona</button>
                         </form>
                     </div>
