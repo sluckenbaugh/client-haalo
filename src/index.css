@@ -11,14 +11,15 @@
     }
 
     .header {
-        color: #12395a;
+        color: black;
         font-size: 32px;
     }
     
     /* Steps */
 
     .step_selected {
-        background: #f9c706;
+        color: #fff;
+        background: #6bcaba;
         width: 3.7rem;
         height: 2.5rem;
         border-radius: 2rem;
@@ -83,14 +84,15 @@
     .button {
         background: #f0f0f2;
         padding: 0.7rem 1rem;
-        border-radius: 6px;
+        border-radius: 2rem;
         font-size: 18px;
-        color: #12395a;
+        color: #000;
         font-weight: 500;
-        transition: all 100ms;
+        transition: all 200ms;
     }
     .button:hover {
-        background: #f9c706;
+        background: #6bcaba;
+        color: #fff
     }
     
     @media screen and (min-width: 768px) {

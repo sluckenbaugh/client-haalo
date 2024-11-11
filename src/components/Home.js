@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from './Footer.js'
 import Header from './Header.js';
-// import laptop from '../_img/laptop.jpg'
 import Innovator from '../_img/cards/v2/Innovator.png'
 import Playmaker from '../_img/cards/v2/Playmaker.png'
 import Operative from '../_img/cards/v2/Operative.png'
