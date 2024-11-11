@@ -7,8 +7,6 @@ import Header from './Header.js';
 import submitHAALOToAirTable from '../APIs/airtable.js';
 import submitHAALOToCrelate from '../APIs/crelate.js';
 import { ADHOCRACY, COMMUNITY, HIERARCHY, MARKET } from '../JSON/haaloObjects.js';
-// import ReCAPTCHA from "react-google-recaptcha";
-
 
 
 const Questions = () => {
@@ -22,23 +20,23 @@ const Questions = () => {
     });
 
     const [questionIndex, setQuestionIndex] = useState(0);
-    const [yourName, setYourName] = useState({
+    const [formData, setFormData] = useState({
         firstName: '',
-        lastName: ''
+        lastName: '',
+        company: '',
+        position: '',
+        email: '',
     });
-    const [yourEmail, setYourEmail] = useState('');
-    // const [cap, setCap] = useState('')
 
-    const handleNameChange = (e) => {
-        if (e.target.name === "firstName")  {
-            setYourName({...yourName, firstName: e.target.value})
-        }
-        else setYourName({...yourName, lastName: e.target.value})
+    const handleChange = (e) => {
+        const {value, name} = e.target
+        e.preventDefault() 
+        setFormData({
+            ...formData,
+            [name]: name === 'email' ? value.toLowerCase() : value
+        })
     }
 
-    const handleEmailChange = (e) => {
-        setYourEmail(e.target.value.toLowerCase())
-    }
 
     const handleNextQuestion = () => {
         if (questionIndex <= haaloData.length - 1 && choices[questionIndex].option != null) {
@@ -62,16 +60,22 @@ const Questions = () => {
 
     const validEmail = () => {
         const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return re.test(String(yourEmail).toLowerCase());
+        return re.test(String(formData.email).toLowerCase());
     }
 
     const navigate = useNavigate()
 
     const takeToResults = async (e) => {
         e.preventDefault()
-        if (answeredAllQuestions() && validEmail() && yourName.firstName !== '' && yourName.lastName !== '') {
-            const user = {firstName: yourName.firstName[0].toUpperCase() + yourName.firstName.slice(1), 
-            lastName: yourName.lastName[0].toUpperCase() + yourName.lastName.slice(1), email: yourEmail}
+        // Validate form
+        if (answeredAllQuestions() 
+            && validEmail() 
+            && formData.firstName
+            && formData.lastName
+            && formData.company
+            && formData.position) {
+            const user = {firstName: formData.firstName[0].toUpperCase() + formData.firstName.slice(1), 
+            lastName: formData.lastName[0].toUpperCase() + formData.lastName.slice(1), email: formData.email}
 
             const persona = PersonaService.findPersona(choices)
 
@@ -83,7 +87,7 @@ const Questions = () => {
             // Get culture
             const arr = Object.values(percentages)
             const max = arr.indexOf(Math.max(...arr))
-            let culture = ''
+            let culture
             if (max === 0) culture = `${ADHOCRACY.name} - ${ADHOCRACY.description}`
             else if (max === 1) culture = `${HIERARCHY.name} - ${HIERARCHY.description}`
             else if (max === 2) culture = `${COMMUNITY.name} - ${COMMUNITY.description}`
@@ -119,21 +123,29 @@ const Questions = () => {
                     <Instructions />
                 </div>
                     <div className='bg-white px-[2rem] md:px-[7rem] py-[3rem] mt-[1.5rem] md:my-[1.5rem] md:rounded-[8px] grid justify-center'>
-                        <form className='grid' onSubmit={(e) => takeToResults(e)}>
+                        <form className='grid' onSubmit={takeToResults}>
                             <input type="hidden" name="subject" value="HAALO Results Submission" />
                             <input type="hidden" name="recipient" value="haalo@avenica.com" />
                             <h3 className='text-companyBlue text-[28px] mb-[1rem] mx-[0.5rem] md:mx-[5rem] text-center'>Please provide your contact information.</h3>
                             <div className="question mt-[1rem]">
                                 <label htmlFor="firstName">First Name</label>
-                                <input className='input' type="text" required="required" onChange={handleNameChange} id="firstName" name="firstName" />
+                                <input className='input' type="text" required="required" onChange={handleChange} id="firstName" name="firstName" value={formData.firstName} />
                             </div>
                             <div className="question">
                                 <label htmlFor="lastName">Last Name</label>
-                                <input className='input' type="text" required="required"  onChange={handleNameChange} id="lastName" name="lastName" />
+                                <input className='input' type="text" required="required"  onChange={handleChange} id="lastName" name="lastName" value={formData.lastName}/>
+                            </div>
+                            <div className="question">
+                                <label htmlFor="email">Email Address</label>
+                                <input className='input' type="text" required="required" value={formData.email} onChange={handleChange} id="email" name="email" />
+                            </div>
+                            <div className="question">
+                                <label htmlFor="company">Company Name</label>
+                                <input className='input' type="text" required="required"  onChange={handleChange} id="company" name="company" value={formData.company}/>
                             </div>
                             <div className="question mb-[2.5rem]">
-                                <label htmlFor="email">Email Address</label>
-                                <input className='input' type="text" required="required" value={yourEmail} onChange={handleEmailChange} id="email" name="email" />
+                                <label htmlFor="position">Position Hiring For</label>
+                                <input className='input' type="text" required="required"  onChange={handleChange} id="position" name="position" value={formData.position}/>
                             </div>
                             <h3 className='text-companyBlue text-[28px] mb-[1rem] mx-[0.5rem] md:mx-[5rem] text-center'>Choose the answer that best descibes you.</h3>
                             {haaloData.map((question, index) => (
@@ -148,11 +160,6 @@ const Questions = () => {
                                         <div className="question_line" />
                                 </div>
                             ))}
-
-                            {/* site key for usaa-haalo.avenica.com: 6Lft_FcqAAAAAEMtkjg0QqVJVtknzSxQfDQXiTHx */}
-                            {/* site key for localhost: 6LdXqvUpAAAAAJAHAwwNNuCIVAcr29_JuXXI6IfP */}
-
-                            {/* <ReCAPTCHA className='mx-auto mb-[1.5rem]' sitekey='6Lft_FcqAAAAAEMtkjg0QqVJVtknzSxQfDQXiTHx' required="required" onChange={(val) => setCap(val)}/> */}
                             <button className='button justify-self-center' type='submit'>Discover My Persona</button>
                         </form>
                     </div>
