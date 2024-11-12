@@ -83,8 +83,6 @@ const Questions = () => {
 
             // Get scores
             const percentages = PersonaService.getPercentages(choices)
-            const array = Object.keys(percentages).map(key => `${key}= ${(percentages[key].toPrecision(2).substring(2, 4))}%`)
-            const scores = array.join(' | ')
 
             // Get culture
             const arr = Object.values(percentages)
@@ -108,10 +106,10 @@ const Questions = () => {
                 description = MARKET.description
             }
             
-            submitHAALOToAirTable(user, persona, scores, culture)
-            // submitHAALOToCrelate(user, persona, scores, culture, percentages)
+            submitHAALOToAirTable(user, persona, culture, percentages)
+            // submitHAALOToCrelate(user, persona, culture, percentages)
             
-            navigate('/results', { state: { persona, scores, culture, description, percentages } })
+            navigate('/results', { state: { persona, culture, description, percentages } })
         }   
     }   
 

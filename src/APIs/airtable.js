@@ -7,7 +7,7 @@
  * @param scores - the percentage scores of the test
  * @param culture - the highest percentage and description 
  */ 
-async function submitHAALOToAirTable (user, persona, scores, culture) {
+async function submitHAALOToAirTable (user, persona, scores, culture, percentages) {
     const descriptions = (persona.description).join(', ')
 
     // Send to Airtable 
@@ -23,7 +23,10 @@ async function submitHAALOToAirTable (user, persona, scores, culture) {
                 "fldgXHmPxkH0eBfa2": user.position,
                 "fldJhA5Kswdl7Gt86": culture,
                 "fldlr0Ats2NTPJf54": persona.name,
-                "fldXxfkNUZsrdZHOh": scores,
+                "fldsplLBi9aJtVdCp": `${(percentages.A.toPrecision(2) * 100)}%`,
+                "fldZIr4WFwAXcN6i2": `${(percentages.H.toPrecision(2) * 100)}%`,
+                "fldAd1J0FhWVB5GDz": `${(percentages.C.toPrecision(2) * 100)}%`,
+                "fldHoGXdarlte0mKO": `${(percentages.M.toPrecision(2) * 100)}%`,
             }
         }
     ]})
