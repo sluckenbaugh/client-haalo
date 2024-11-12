@@ -16,13 +16,14 @@ async function submitHAALOToAirTable (user, persona, scores, culture) {
         "records": [
         {
             "fields": {
-                "fldNkwhg3P8lqxs53": user.firstName,
-                "fld8Qb4phbDgjK2ST": user.lastName,
-                "fld4FuqsRa8SAf6Cb": user.email,
-                "fldL6JzdRtXqLFKMg": persona.name,
-                "fldWsB67lH5j1mBgb": descriptions,
-                "fldO4MIKpacx19xcI": scores,
-                "fldcFCsEQGJfyFfvm": culture
+                "fldM5QFRQLmOt0T1K": user.firstName,
+                "fldqB3GXLbsvgbiy5": user.lastName,
+                "fldKFbBpIZOjqzrQt": user.email,
+                "flddD3mFg7tkbTXyz": user.company,
+                "fldgXHmPxkH0eBfa2": user.position,
+                "fldJhA5Kswdl7Gt86": culture,
+                "fldlr0Ats2NTPJf54": persona.name,
+                "fldXxfkNUZsrdZHOh": scores,
             }
         }
     ]})
@@ -30,11 +31,12 @@ async function submitHAALOToAirTable (user, persona, scores, culture) {
     const requestOptions = { 
         method: "POST",
         headers: { 
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Authorization": "Bearer patWiziWhG5YG9Ph2.47142afa972374cd23308f668c6a42c816abdf02fa45dafd57541fd679c90ee7"
         },
         body: airtableData
     }
-    await fetch("https://avenica-backend.onrender.com/airtable", requestOptions)
+    await fetch("https://api.airtable.com/v0/app5Hvza0912EJf6B/tblPhuF6TYWuDp7to", requestOptions)
 }
 
 export default submitHAALOToAirTable;

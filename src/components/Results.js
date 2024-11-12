@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState} from 'react';
 import { useLocation } from 'react-router-dom';
 import Footer from './Footer';
 import Header from './Header';
@@ -6,11 +6,17 @@ import { useEffect } from 'react';
 import Cards from '../services/Cards';
 
 
-
-
     const Results = ({ props }) => {
+    const [show, setShow] = useState(false)
     const location = useLocation();
-    const persona = location.state.persona;
+    const {persona, scores, culture, description, percentages} = location.state
+
+    const descriptionParagraph = `${persona.description.join('. ')}.`
+    const descriptionDisplay = show ? descriptionParagraph : `${descriptionParagraph.substring(0, 100)}...`
+
+    const handleClick = () => {
+        setShow(!show)
+    }
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -38,9 +44,35 @@ import Cards from '../services/Cards';
                         </div>
                     </div>
                     <div className='flex flex-col items-center justify-center'>
-                        <h2 className='text-companyBlue text-center text-[40px] mt-[3rem] mb-[2rem]'>Your persona is: {persona.name.toUpperCase()}</h2>
+                        <h2 className='header my-[1rem]'>Results</h2>
+                        <div className='grid grid-cols-2 gap-5 grey p-[1.5rem] rounded-[0.5rem] text-[1.2rem]'>
+                            <p>Primary Culture:</p>
+                            <p>{culture}</p>
+                            <p>Description:</p>
+                            <p>{description}</p>
+                            <p className='font-bold mt-[2rem]'>Culture Breakdown</p>
+                            <p></p>
+                            <p>Adhocracy:</p>
+                            <p>{`${percentages.A.toPrecision(2) * 100}%`}</p>
+                            <p>Hierarchy:</p>
+                            <p>{`${percentages.H.toPrecision(2) * 100}%`}</p>
+                            <p>Community:</p>
+                            <p>{`${percentages.C.toPrecision(2) * 100}%`}</p>
+                            <p>Market:</p>
+                            <p>{`${percentages.M.toPrecision(2) * 100}%`}</p>
+                            <p className='font-bold mt-[2rem]'>Ideal Client Persona</p>
+                            <p></p>
+                            <p>Persona:</p>
+                            <p>{persona.name}</p>
+                            <p>description:</p>
+                            <div>
+                                <p className='mr-2'>{descriptionDisplay}</p>
+                                <button className='hover:underline' onClick={handleClick}>{show ? "Show less" : "Show more"}</button>
+                            </div>
+                            <div></div>                         
+                        </div>
                     </div>
-                    <PersonaMeaning persona={persona}/>    
+                    {/* <PersonaMeaning persona={persona}/>     */}
                 </div>
             </main>
             <Footer />

@@ -23,11 +23,12 @@ const Questions = () => {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
-        company: '',
-        position: '',
         email: '',
+        company: '',
+        position: ''
     });
 
+    
     const handleChange = (e) => {
         const {value, name} = e.target
         e.preventDefault() 
@@ -75,7 +76,8 @@ const Questions = () => {
             && formData.company
             && formData.position) {
             const user = {firstName: formData.firstName[0].toUpperCase() + formData.firstName.slice(1), 
-            lastName: formData.lastName[0].toUpperCase() + formData.lastName.slice(1), email: formData.email}
+            lastName: formData.lastName[0].toUpperCase() + formData.lastName.slice(1), email: formData.email,
+            company: formData.company, position: formData.position}
 
             const persona = PersonaService.findPersona(choices)
 
@@ -88,15 +90,28 @@ const Questions = () => {
             const arr = Object.values(percentages)
             const max = arr.indexOf(Math.max(...arr))
             let culture
-            if (max === 0) culture = `${ADHOCRACY.name} - ${ADHOCRACY.description}`
-            else if (max === 1) culture = `${HIERARCHY.name} - ${HIERARCHY.description}`
-            else if (max === 2) culture = `${COMMUNITY.name} - ${COMMUNITY.description}`
-            else culture = `${MARKET.name} - ${MARKET.description}`
+            let description
+            if (max === 0) {
+                culture = ADHOCRACY.name
+                description = ADHOCRACY.description
+            }
+            else if (max === 1) {
+                culture = HIERARCHY.name
+                description = HIERARCHY.description
+            }
+            else if (max === 2) {
+                culture = COMMUNITY.name
+                description = COMMUNITY.description
+            }
+            else {
+                culture = MARKET.name
+                description = MARKET.description
+            }
             
             submitHAALOToAirTable(user, persona, scores, culture)
-            submitHAALOToCrelate(user, persona, scores, culture, percentages)
+            // submitHAALOToCrelate(user, persona, scores, culture, percentages)
             
-            navigate('/results', { state: { persona } })
+            navigate('/results', { state: { persona, scores, culture, description, percentages } })
         }   
     }   
 
@@ -147,7 +162,7 @@ const Questions = () => {
                                 <label htmlFor="position">Position Hiring For</label>
                                 <input className='input' type="text" required="required"  onChange={handleChange} id="position" name="position" value={formData.position}/>
                             </div>
-                            <h3 className='text-companyBlue text-[28px] mb-[1rem] mx-[0.5rem] md:mx-[5rem] text-center'>Choose the answer that best descibes you.</h3>
+                            <h3 className='text-companyBlue text-[28px] mb-[1rem] mx-[0.5rem] md:mx-[5rem] text-center'>Choose each answer from the perspective of your ideal candidate.</h3>
                             {haaloData.map((question, index) => (
                                 <div className="text-lg" key={index}>
                                     <p className='text-xl mb-[0.5rem] mt-[1rem]'>{`Question ${index + 1}:`}</p>
