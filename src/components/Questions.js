@@ -81,7 +81,7 @@ const Questions = () => {
 
             const persona = PersonaService.findPersona(choices)
 
-            // Get scores
+            // Get culture percentages
             const percentages = PersonaService.getPercentages(choices)
 
             // Get culture

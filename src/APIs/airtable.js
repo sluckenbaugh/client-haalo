@@ -7,8 +7,14 @@
  * @param scores - the percentage scores of the test
  * @param culture - the highest percentage and description 
  */ 
-async function submitHAALOToAirTable (user, persona, scores, culture, percentages) {
-    const descriptions = (persona.description).join(', ')
+async function submitHAALOToAirTable (user, persona, culture, percentages) {
+
+    const cultures = {
+        "adhocracy":`${(percentages.A.toPrecision(2) * 100)}%`,
+        "hierachy": `${(percentages.H.toPrecision(2) * 100)}%`,
+        "community": `${(percentages.C.toPrecision(2) * 100)}%`,
+        "market": `${(percentages.M.toPrecision(2) * 100)}%`,
+    }
 
     // Send to Airtable 
     
@@ -23,10 +29,10 @@ async function submitHAALOToAirTable (user, persona, scores, culture, percentage
                 "fldgXHmPxkH0eBfa2": user.position,
                 "fldJhA5Kswdl7Gt86": culture,
                 "fldlr0Ats2NTPJf54": persona.name,
-                "fldsplLBi9aJtVdCp": `${(percentages.A.toPrecision(2) * 100)}%`,
-                "fldZIr4WFwAXcN6i2": `${(percentages.H.toPrecision(2) * 100)}%`,
-                "fldAd1J0FhWVB5GDz": `${(percentages.C.toPrecision(2) * 100)}%`,
-                "fldHoGXdarlte0mKO": `${(percentages.M.toPrecision(2) * 100)}%`,
+                "fldsplLBi9aJtVdCp": cultures.adhocracy,
+                "fldZIr4WFwAXcN6i2": cultures.hierachy,
+                "fldAd1J0FhWVB5GDz": cultures.community,
+                "fldHoGXdarlte0mKO": cultures.market
             }
         }
     ]})
