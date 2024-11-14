@@ -7,7 +7,7 @@
  * @param scores - the percentage scores of the test
  * @param culture - the highest percentage and description 
  */ 
-async function submitHAALOToCrelate (user, persona, scores, culture, percentages) {
+async function submitHAALOToCrelate (user, persona, culture, percentages) {
     const descriptions = (persona.description).join(', ')
 
     // Send to Crelate
@@ -22,7 +22,6 @@ async function submitHAALOToCrelate (user, persona, scores, culture, percentages
               "Title": persona.name
             },
             "HAALO_Description": descriptions,
-            "HAALO_Assessment_Score": scores,
             "HAALO_Primary_Culture": culture,
             "Adhocracy": percentages.A.toPrecision(2),
             "Hierarchy": percentages.H.toPrecision(2),

@@ -7,10 +7,18 @@ module.exports = {
     extend: {
       colors: {
         companyTeal: '#6bcaba',
-        companyGray: '#f0f0f2'
+        companyGray: '#f0f0f2',
+        companyPurple: '#8E90C1'
       },
       fontFamily: {
         'figtree': ['figtree', 'sans-serif']
+      },
+      listStyleType: {
+        none: 'none',
+        disc: 'disc',
+        decimal: 'decimal',
+        square: 'square',
+        roman: 'upper-roman',
       }
     },
   },

@@ -41,11 +41,10 @@ async function submitHAALOToAirTable (user, persona, culture, percentages) {
         method: "POST",
         headers: { 
             "Content-Type": "application/json",
-            "Authorization": "Bearer patWiziWhG5YG9Ph2.47142afa972374cd23308f668c6a42c816abdf02fa45dafd57541fd679c90ee7"
         },
         body: airtableData
     }
-    await fetch("https://api.airtable.com/v0/app5Hvza0912EJf6B/tblPhuF6TYWuDp7to", requestOptions)
+    await fetch("https://avenica-backend.onrender.com/client", requestOptions)
 }
 
 export default submitHAALOToAirTable;
