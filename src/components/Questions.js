@@ -139,7 +139,7 @@ const Questions = () => {
                         <form className='grid' onSubmit={takeToResults}>
                             <input type="hidden" name="subject" value="HAALO Results Submission" />
                             <input type="hidden" name="recipient" value="haalo@avenica.com" />
-                            <h3 className='text-companyBlue text-[28px] mb-[1rem] mx-[0.5rem] md:mx-[5rem] text-center'>Please provide your contact information.</h3>
+                            <h3 className='text-companyBlue text-[28px] mb-[1rem] mx-[0.5rem] md:mx-[5rem] text-center'>Please provide the following information.</h3>
                             <div className="question mt-[1rem]">
                                 <label htmlFor="firstName">First Name</label>
                                 <input className='input' type="text" required="required" onChange={handleChange} id="firstName" name="firstName" value={formData.firstName} />
@@ -173,7 +173,7 @@ const Questions = () => {
                                         <div className="question_line" />
                                 </div>
                             ))}
-                            <button className='button justify-self-center' type='submit'>Discover My Persona</button>
+                            <button className='button justify-self-center' type='submit'>Submit</button>
                         </form>
                     </div>
             </main>
@@ -188,7 +188,7 @@ const Instructions = () => {
     return (
         <div className='flex flex-col items-center justify-center mt-[1.5rem] mx-[1.5rem] md:mx-[5rem]'>
             <h2 className='header mb-[0.7rem]'>Instructions:</h2>
-            <p className="text-center text-lg max-w-[36rem]">Please select the answer that best aligns with you. If neither answer represents you, choose the one that feels closest to your gut reaction.<br />It typically takes around 10 minutes to complete the inventory.</p>
+            <p className="text-center text-lg max-w-[36rem]">Select the answer that you feel would best align with your desired candidate. If neither answer represents them, choose the one that feels closest to your gut reaction.<br />It typically takes around 10 minutes to complete the inventory.</p>
         </div>   
     )
 }

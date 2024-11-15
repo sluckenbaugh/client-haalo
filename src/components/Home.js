@@ -51,7 +51,7 @@ const AboutHAALO = () => {
     return (
         <div>
             <h3 className='mb-[1rem] header text-center'>What is HAALO?</h3>
-            <p className=" text-lg text-center mx-auto max-w-[50rem]">HAALO stems from an in-depth exploration of 4 organizational cultures (Adhocracy, Community, Hierarchy, Market), delineating various working styles, motivations, and other key aspects. Through this study, we've developed a comprehensive inventory of statements, focused through a people-centric perspective. The results provide insight into how an individual’s underlying preferences and traits translate into their potential to succeed in a specific work environment and position.  </p>
+            <p className=" text-lg text-center mx-auto max-w-[50rem]">HAALO stems from an in-depth exploration of four organizational cultures (Adhocracy, Community, Hierarchy, Market), delineating various working styles, motivations, and other key aspects. Through this study, we've developed a comprehensive inventory of statements, focused through a people-centric perspective. The results provide insight into how an individual’s underlying preferences and traits translate into their potential to succeed in a specific work environment and position.  </p>
                 <div className='lg:grid grid-cols-2 my-[2.5rem] xl:mx-auto xl:max-w-[55rem] lg:gap-[1rem] mb-[2rem]'>
                         <div className='bg-companyGray p-[1rem] lg:rounded-[0.3rem] px-[1.8rem] mx-auto'>
                             <h3 className='header font-bold text-center'>ADHOCRACY</h3>
