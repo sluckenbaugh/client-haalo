@@ -46,7 +46,7 @@ const haaloData = [
                 "associatedLetter": "M"
             },
             {
-                "statement": "They love supporting others even if that means I don't get the credit",
+                "statement": "They love supporting others even if that means they don't get the credit",
                 "associatedLetter": "C"
             }
         ]
@@ -55,11 +55,11 @@ const haaloData = [
         "id": 5,
         "options": [
             {
-                "statement": "They seek to be of service, power doesn't drive me",
+                "statement": "They seek to be of service, power doesn't drive them",
                 "associatedLetter": "H"
             },
             {
-                "statement": "They seek to be on a solid team of equals, status doesn't drive me",
+                "statement": "They seek to be on a solid team of equals, status doesn't drive them",
                 "associatedLetter": "C"
             }
         ]
@@ -72,7 +72,7 @@ const haaloData = [
                 "associatedLetter": "H"
             },
             {
-                "statement": "They march to the beat of my own drum",
+                "statement": "They march to the beat of their own drum",
                 "associatedLetter": "A"
             }
         ]
@@ -94,11 +94,11 @@ const haaloData = [
         "id": 8,
         "options": [
             {
-                "statement": "They typically seek out perspectives other than my own",
+                "statement": "They typically seek out perspectives other than their own",
                 "associatedLetter": "H"
             },
             {
-                "statement": "They typically rely heavily on my own perspective ",
+                "statement": "They typically rely heavily on their own perspective ",
                 "associatedLetter": "A"
             }
         ]
@@ -111,7 +111,7 @@ const haaloData = [
                 "associatedLetter": "H"
             },
             {
-                "statement": "They are great at executing my part of a plan",
+                "statement": "They are great at executing their part of a plan",
                 "associatedLetter": "M"
             }
         ]
@@ -146,7 +146,7 @@ const haaloData = [
         "id": 12,
         "options": [
             {
-                "statement": "They like to know how I can best support my teammates ",
+                "statement": "They like to know how they can best support other teammates ",
                 "associatedLetter": "C"
             },
             {
@@ -159,11 +159,11 @@ const haaloData = [
         "id": 13,
         "options": [
             {
-                "statement": "They build relationships with people who share my same vision ",
+                "statement": "They build relationships with people who share their vision ",
                 "associatedLetter": "A"
             },
             {
-                "statement": "They build relationships with people that can help advance my career",
+                "statement": "They build relationships with people that can help advance their career",
                 "associatedLetter": "M"
             }
         ]
@@ -172,11 +172,11 @@ const haaloData = [
         "id": 14,
         "options": [
             {
-                "statement": "They are high energy and others look to me for answers",
+                "statement": "They are high energy and others look to them for answers",
                 "associatedLetter": "A"
             },
             {
-                "statement": "They are a good listener and others count on my support",
+                "statement": "They are a good listener and others count on their support",
                 "associatedLetter": "C"
             }
         ]
@@ -211,11 +211,11 @@ const haaloData = [
         "id": 17,
         "options": [
             {
-                "statement": "They are most successful when I have others around me who are supportive",
+                "statement": "They are most successful when they have others around who are supportive",
                 "associatedLetter": "C"
             },
             {
-                "statement": "They are most successful on a winning team no matter what role I play",
+                "statement": "They are most successful on a winning team no matter what role they play",
                 "associatedLetter": "M"
             }
         ]
@@ -224,11 +224,11 @@ const haaloData = [
         "id": 18,
         "options": [
             {
-                "statement": "They often make friends with my coworkers",
+                "statement": "They often make friends with coworkers",
                 "associatedLetter": "C"
             },
             {
-                "statement": "They tend to view my coworkers as competition",
+                "statement": "They tend to view coworkers as competition",
                 "associatedLetter": "M"
             }
         ]
@@ -241,7 +241,7 @@ const haaloData = [
                 "associatedLetter": "M"
             },
             {
-                "statement": "They like to understand the goal but then work with my team to execute",
+                "statement": "They like to understand the goal but then work with the team to execute",
                 "associatedLetter": "C"
             }
         ]
@@ -276,7 +276,7 @@ const haaloData = [
         "id": 22,
         "options": [
             {
-                "statement": "They thrive in areas where I know my next step but can always handle a curveball",
+                "statement": "They thrive in areas where they know the next step but can always handle a curveball",
                 "associatedLetter": "H"
             },
             {
@@ -293,7 +293,7 @@ const haaloData = [
                 "associatedLetter": "H"
             },
             {
-                "statement": "They love to stand out as the result of my talents and contribution",
+                "statement": "They love to stand out as the result of their talents and contribution",
                 "associatedLetter": "M"
             }
         ]
@@ -328,11 +328,11 @@ const haaloData = [
         "id": 26,
         "options": [
             {
-                "statement": "They will stop at nothing to create the future I see",
+                "statement": "They will stop at nothing to create the future they see",
                 "associatedLetter": "A"
             },
             {
-                "statement": "They will stop at nothing to support my team",
+                "statement": "They will stop at nothing to support the team",
                 "associatedLetter": "C"
             }
         ]
@@ -341,11 +341,11 @@ const haaloData = [
         "id": 27,
         "options": [
             {
-                "statement": "They struggle to connect with people who don't believe in what I do",
+                "statement": "They struggle to connect with people who don't believe in what they do",
                 "associatedLetter": "A"
             },
             {
-                "statement": "They feel connected to others who believe in what I believe",
+                "statement": "They feel connected to others who believe in what they believe",
                 "associatedLetter": "C"
             }
         ]
@@ -354,7 +354,7 @@ const haaloData = [
         "id": 28,
         "options": [
             {
-                "statement": "They take tremendous pride in the accuracy of my work",
+                "statement": "They take tremendous pride in the accuracy of their work",
                 "associatedLetter": "H"
             },
             {
@@ -380,11 +380,11 @@ const haaloData = [
         "id": 30,
         "options": [
             {
-                "statement": "They connect my success to my ability to help my leader succeed",
+                "statement": "They connect success to their ability to help the leader succeed",
                 "associatedLetter": "H"
             },
             {
-                "statement": "They connect my success to how quickly I am able to grow in my career",
+                "statement": "They connect success to how quickly they are able to grow in their career",
                 "associatedLetter": "M"
             }
         ]
