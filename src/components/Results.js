@@ -72,7 +72,7 @@ import Cards from '../services/Cards';
                             <p>{persona.name}</p>
                             <p>Related Personas:</p>
                             <ul>
-                                {relatedPersonas[culture].map(p => <li key={p}>{p}</li>)}
+                                {relatedPersonas[culture].map((p) => p !== persona.name && <li key={p}>{p}</li>)}
                             </ul>
                         </div>
                     </div>
