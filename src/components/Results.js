@@ -11,6 +11,13 @@ import Cards from '../services/Cards';
     const location = useLocation();
     const {persona, scores, culture, description, percentages} = location.state
 
+    const relatedPersonas = {
+        "Adhocracy": ["Innovator", "Advocate", "Entrepreneur", "Surgeon", "Politician", "Chameleon"],
+        "Hierarchy": ["General", "Trainer", "Closer", "Analyst", "Consultant", "Mercenary"],
+        "Community": ["Captain", "Delegate", "Counselor", "Academic", "Operative", "Chaneleon"],
+        "Market": ["Hustler", "Maverick", "Playmaker", "Broker", "Envoy", "Mercenary"]
+    }
+
     const descriptionParagraph = `${persona.description.join('. ')}.`
     const descriptionDisplay = show ? descriptionParagraph : `${descriptionParagraph.substring(0, 100)}...`
 
@@ -21,7 +28,6 @@ import Cards from '../services/Cards';
     useEffect(() => {
         window.scrollTo(0, 0)
       }, []);
-
 
     return (
         <div className='bg-companyGray'>
@@ -60,19 +66,16 @@ import Cards from '../services/Cards';
                             <p>{`${percentages.C.toPrecision(2) * 100}%`}</p>
                             <p>Market:</p>
                             <p>{`${percentages.M.toPrecision(2) * 100}%`}</p>
-                            <p className='font-bold mt-[2rem]'>Ideal Client Persona</p>
+                            <p className='font-bold mt-[2rem]'>Candidate Persona</p>
                             <p></p>
-                            <p>Persona:</p>
+                            <p>Primary Persona:</p>
                             <p>{persona.name}</p>
-                            <p>description:</p>
-                            <div>
-                                <p className='mr-2'>{descriptionDisplay}</p>
-                                <button className='hover:underline' onClick={handleClick}>{show ? "Show less" : "Show more"}</button>
-                            </div>
-                            <div></div>                         
+                            <p>Related Personas:</p>
+                            <ul>
+                                {relatedPersonas[culture].map(p => <li key={p}>{p}</li>)}
+                            </ul>
                         </div>
                     </div>
-                    {/* <PersonaMeaning persona={persona}/>     */}
                 </div>
             </main>
             <Footer />
