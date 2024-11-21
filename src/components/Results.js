@@ -14,7 +14,7 @@ import Cards from '../services/Cards';
     const relatedPersonas = {
         "Adhocracy": ["Innovator", "Advocate", "Entrepreneur", "Surgeon", "Politician", "Chameleon"],
         "Hierarchy": ["General", "Trainer", "Closer", "Analyst", "Consultant", "Mercenary"],
-        "Community": ["Captain", "Delegate", "Counselor", "Academic", "Operative", "Chaneleon"],
+        "Community": ["Captain", "Delegate", "Counselor", "Academic", "Operative", "Chameleon"],
         "Market": ["Hustler", "Maverick", "Playmaker", "Broker", "Envoy", "Mercenary"]
     }
 

@@ -77,7 +77,7 @@ const Questions = () => {
             && formData.position) {
             const user = {firstName: formData.firstName[0].toUpperCase() + formData.firstName.slice(1), 
             lastName: formData.lastName[0].toUpperCase() + formData.lastName.slice(1), email: formData.email,
-            company: formData.company, position: formData.position}
+            company: formData.company, position: formData.position.toLowerCase()}
 
             const persona = PersonaService.findPersona(choices)
 
