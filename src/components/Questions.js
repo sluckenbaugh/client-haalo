@@ -8,7 +8,6 @@ import submitHAALOToAirTable from '../APIs/airtable.js';
 import submitHAALOToCrelate from '../APIs/crelate.js';
 import { ADHOCRACY, COMMUNITY, HIERARCHY, MARKET } from '../JSON/haaloObjects.js';
 
-
 const Questions = () => {
     const [choices, setChoices] = useState(() => {
         const initialArray = [];
