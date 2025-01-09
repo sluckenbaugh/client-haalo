@@ -148,7 +148,7 @@ const Questions = () => {
                                 <input className='input' type="text" required="required"  onChange={handleChange} id="lastName" name="lastName" value={formData.lastName}/>
                             </div>
                             <div className="question">
-                                <label htmlFor="email">Email Address</label>
+                                <label htmlFor="email">Company Email Address</label>
                                 <input className='input' type="text" required="required" value={formData.email} onChange={handleChange} id="email" name="email" />
                             </div>
                             <div className="question">
