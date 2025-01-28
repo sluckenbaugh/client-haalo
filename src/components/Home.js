@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from './Footer.js'
 import Header from './Header.js';
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     
@@ -25,7 +26,7 @@ const Home = () => {
                         </div>
                     </div>
                     <WelcomeMessage />
-                    <a href="/test" className='justify-self-center mt-[2rem]'><button name="starttest" value="Take The Halo Test" className="button">Launch The HAALO Inventory</button></a>
+                    <Link to='/form' className='justify-self-center mt-[2rem]'><button name="starttest" value="Take The Halo Test" className="button">Launch The HAALO Inventory</button></Link>
                 </div>
                 <div className='bg-white px-[1rem] md:px-[4rem] pt-[1rem] mt-[2rem] md:my-[2rem]  md:rounded-[8px] grid'>
                     <AboutHAALO />

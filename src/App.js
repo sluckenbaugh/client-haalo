@@ -1,4 +1,5 @@
 import Home from './components/Home';
+import Form from './components/Form';
 import Questions from './components/Questions';
 import Results from './components/Results';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -10,6 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/form" element={<Form />} />
           <Route path="/test" element={<Questions />} />
           <Route path="/results" element={<Results />} />
         </Routes>
