@@ -61,6 +61,11 @@
         display: grid;
         margin-bottom: 1rem;
     }
+    .location {
+        display: grid;
+        margin: -1rem 0 1rem 0;
+    }
+
     .input {
         margin-top: 0.2rem;
         border: 1px solid rgb(190, 190, 190);
@@ -69,11 +74,15 @@
         padding: 1px 5px;
     }
 
+
     @media  screen and (min-width: 430px) {
         .input {
             width: 365px;
         }
         .question {
+            justify-self: center;
+        }
+        .location {
             justify-self: center;
         }
     }

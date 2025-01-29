@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import haaloData from '../JSON/haaloData'
 import * as PersonaService from '../services/PersonaService'
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -8,7 +8,13 @@ import submitHAALOToAirTable from '../APIs/airtable.js';
 import submitHAALOToCrelate from '../APIs/crelate.js';
 import { ADHOCRACY, COMMUNITY, HIERARCHY, MARKET } from '../JSON/haaloObjects.js';
 
+
 const Questions = () => {
+
+    // Start at top of screen
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
 
     const navigate = useNavigate()
     const location = useLocation()

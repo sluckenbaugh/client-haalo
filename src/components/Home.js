@@ -9,22 +9,7 @@ const Home = () => {
         <div className='bg-companyGray'>
             <Header />
             <main className='md:px-[6rem]'>
-                <div id="step1" className=" bg-white md:px-[7rem] py-[3rem] md:my-[1.5rem] md:rounded-[8px] grid">
-                    <div className='flex justify-center'>
-                        <div className="flex justify-between w-[16rem] md:w-[20rem] items-center">
-                            <div className="step_selected">
-                                <p className='step_num'>Step 1</p>
-                            </div>
-                            <div className="step_line" />
-                            <div className="step_unselected">
-                                <p className='step_num'>Step 2</p>
-                            </div>
-                            <div className="step_line" />
-                            <div className="step_unselected">
-                                <p className='step_num'>Step 3</p>
-                            </div>
-                        </div>
-                    </div>
+                <div className=" bg-white md:px-[7rem] py-[3rem] md:my-[1.5rem] md:rounded-[8px] grid">             
                     <WelcomeMessage />
                     <Link to='/form' className='justify-self-center mt-[2rem]'><button name="starttest" value="Take The Halo Test" className="button">Launch The HAALO Inventory</button></Link>
                 </div>
@@ -41,8 +26,8 @@ export default Home;
 
 const WelcomeMessage = () => {
     return (
-        <div className='flex flex-col items-center justify-center w-[75%] md:w-[90%] lg:w-[50%] mx-auto mt-[1.5rem]'>
-            <h2 className='mb-[1rem] header text-center'>Welcome to HAALO</h2>
+        <div className='w-[75%] md:w-[90%] lg:w-[50%] mx-auto'>
+            <h2 className='mb-[1rem] mt-[-1rem] header text-center'>Welcome to HAALO</h2>
             <p className="text-center text-lg max-w-[50rem]">Each of us have preferences, experiences, and values that impact how we show up professionally. HAALO allows us to better understand individuals beyond their resume and your needs beyond a job description to help predict potential and launch successful careers for your team.</p>
         </div>
     )

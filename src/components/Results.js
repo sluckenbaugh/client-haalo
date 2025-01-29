@@ -6,7 +6,12 @@ import { useEffect } from 'react';
 import Cards from '../services/Cards';
 
 
-    const Results = ({ props }) => {
+const Results = ({ props }) => {
+    // Start at top of screen
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
     const [show, setShow] = useState(false)
     const location = useLocation();
     const {persona, scores, culture, description, percentages} = location.state
