@@ -1,9 +1,8 @@
-import React, { useState} from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Footer from './Footer';
 import Header from './Header';
 import { useEffect } from 'react';
-import Cards from '../services/Cards';
 
 
 const Results = ({ props }) => {
@@ -12,9 +11,8 @@ const Results = ({ props }) => {
         window.scrollTo(0, 0)
     }, []);
 
-    const [show, setShow] = useState(false)
     const location = useLocation();
-    const {persona, scores, culture, description, percentages} = location.state
+    const {persona, culture, description, percentages} = location.state
 
     const relatedPersonas = {
         "Adhocracy": ["Innovator", "Advocate", "Entrepreneur", "Surgeon", "Politician", "Chameleon"],
@@ -22,17 +20,6 @@ const Results = ({ props }) => {
         "Community": ["Captain", "Delegate", "Counselor", "Academic", "Operative", "Chameleon"],
         "Market": ["Hustler", "Maverick", "Playmaker", "Broker", "Envoy", "Mercenary"]
     }
-
-    const descriptionParagraph = `${persona.description.join('. ')}.`
-    const descriptionDisplay = show ? descriptionParagraph : `${descriptionParagraph.substring(0, 100)}...`
-
-    const handleClick = () => {
-        setShow(!show)
-    }
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-      }, []);
 
     return (
         <div className='bg-companyGray'>
@@ -90,22 +77,3 @@ const Results = ({ props }) => {
 
 export default Results;
 
-const PersonaMeaning = ({ persona }) => {
-
-    return (
-        <div className='gap-10 mt-[1rem]'>
-            <img className='rounded-[6px] mt-[1rem] mx-auto w-[90%] md:w-[100%] lg:w-[70%]' src={Cards[persona.name]} alt={`${persona.name} persona card`} />
-            <div className='my-[5rem]'>
-                <div className='w-[90%] md:w-[100%] lg:w-[70%] mx-auto'>
-                <h3 className='header text-center'>What Your Persona Means:</h3>
-                    {persona.description.map((point, index) => (
-                        <div className='flex my-[1rem] text-xl mx-[1rem]' key={index}>
-                            <div className='text-companyYellow mr-[0.5rem]'>&#10003;</div>
-                            {point}
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-    )
-}
