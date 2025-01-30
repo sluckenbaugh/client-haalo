@@ -163,7 +163,7 @@ export default function Form() {
                             {/* If work env is not remote */}
                             {office && 
                                 <div className="location">
-                                    <h3 className="mb-[1rem] mt-[2rem]">Please Specify the location of the position</h3>
+                                    <h3 className="mb-[1rem] mt-[1.2rem] text-lg">Please specify the location of the position</h3>
                                     <label htmlFor='city'>City</label>
                                     <input className="input mb-[1rem]" required='required' id="city" name="city" value={formData.city} onChange={handleInput}/>
                                     <label htmlFor='state'>State</label>
