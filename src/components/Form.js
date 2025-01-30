@@ -118,6 +118,7 @@ export default function Form() {
                                 <label htmlFor="industry">Industry</label>
                                 <select className="input" id="industry" name="industry" required='required' onChange={handleInput}>
                                     <option value=''>-- Please Select One --</option>
+                                    <option value='Advertising, Marketing'>Advertising, Marketing</option>
                                     <option value='Agriculture, Forestry and Fishing'>Agriculture, Forestry and Fishing</option>
                                     <option value='Banking, Finance'>Banking, Finance</option>
                                     <option value='Biotech, Pharmaceuticals, Medicine'>Biotech, Pharmaceuticals, Medicine</option>
@@ -155,13 +156,14 @@ export default function Form() {
                                     <option value=''>-- Please Select One --</option>
                                     <option value='Remote'>Remote</option>
                                     <option value='Hybrid'>Hybrid</option>
-                                    <option value='In-Office'>In-Office</option>
+                                    <option value='In-Office'>On-Site</option>
                                 </select>
                             </div>
 
                             {/* If work env is not remote */}
                             {office && 
                                 <div className="location">
+                                    <h3 className="mb-[1rem] mt-[2rem]">Please Specify the location of the position</h3>
                                     <label htmlFor='city'>City</label>
                                     <input className="input mb-[1rem]" required='required' id="city" name="city" value={formData.city} onChange={handleInput}/>
                                     <label htmlFor='state'>State</label>
