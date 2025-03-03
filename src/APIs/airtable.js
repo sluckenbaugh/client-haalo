@@ -1,3 +1,5 @@
+import formatName from "../functions/formatName"
+
 // This file is for AirTable functions
 
 /** 
@@ -8,6 +10,9 @@
  * @param culture - the highest percentage and description 
  */ 
 async function submitHAALOToAirTable (user, persona, culture, percentages) {
+
+    const formattedFirstName = formatName(user.firstName)
+    const formattedLastName = formatName(user.lastName)
 
     const cultures = {
         "adhocracy":`${(percentages.A.toPrecision(2) * 100)}%`,
@@ -22,8 +27,8 @@ async function submitHAALOToAirTable (user, persona, culture, percentages) {
         "records": [
         {
             "fields": {
-                "fldM5QFRQLmOt0T1K": user.firstName,
-                "fldqB3GXLbsvgbiy5": user.lastName,
+                "fldM5QFRQLmOt0T1K": formattedFirstName,
+                "fldqB3GXLbsvgbiy5": formattedLastName,
                 "fldKFbBpIZOjqzrQt": user.email,
                 "flddD3mFg7tkbTXyz": user.company,
                 "fldgXHmPxkH0eBfa2": user.position,
