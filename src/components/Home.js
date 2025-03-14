@@ -45,11 +45,11 @@ const AboutHAALO = () => {
                             <div className='bg-black h-[1px] mt-2'></div>
                             <p className='text-lg my-[0.3rem]'>Related Personas:</p>
                             <ul className='list-disc ml-[1rem]'>
-                                <li className='text-companyTeal'><p className='text-black'>Innovator</p></li>
+                                <li className='text-companyTeal'><p className='text-black'>Pioneer</p></li>
                                 <li className='text-companyTeal'><p className='text-black'>Advocate</p></li>
                                 <li className='text-companyTeal'><p className='text-black'>Entrepreneur</p></li>
-                                <li className='text-companyTeal'><p className='text-black'>Surgeon</p></li>
-                                <li className='text-companyTeal'><p className='text-black'>Politician</p></li>          
+                                <li className='text-companyTeal'><p className='text-black'>Navigator</p></li>
+                                <li className='text-companyTeal'><p className='text-black'>Diplomat</p></li>          
                                 <li className='text-companyTeal'><p className='text-black'>Chameleon</p></li>          
                             </ul>             
                         </div>
@@ -60,9 +60,9 @@ const AboutHAALO = () => {
                             <p className='text-lg my-[0.3rem]'>Related Personas:</p>
                             <ul className='list-disc ml-[1rem]'>
                                 <li className='text-white'><p className='text-black'>General</p></li>
-                                <li className='text-white'><p className='text-black'>Trainer</p></li>
+                                <li className='text-white'><p className='text-black'>Guardian</p></li>
                                 <li className='text-white'><p className='text-black'>Closer</p></li>
-                                <li className='text-white'><p className='text-black'>Analyst</p></li>
+                                <li className='text-white'><p className='text-black'>Scientist</p></li>
                                 <li className='text-white'><p className='text-black'>Consultant</p></li>          
                                 <li className='text-white'><p className='text-black'>Mercenary</p></li>          
                             </ul>             
@@ -74,10 +74,10 @@ const AboutHAALO = () => {
                             <p className='text-lg my-[0.3rem]'>Related Personas:</p>
                             <ul className='list-disc ml-[1rem]'>
                                 <li className='text-black'><p className='text-white'>Captain</p></li>
-                                <li className='text-black'><p className='text-white'>Delegate</p></li>
+                                <li className='text-black'><p className='text-white'>Champion</p></li>
                                 <li className='text-black'><p className='text-white'>Counselor</p></li>
-                                <li className='text-black'><p className='text-white'>Academic</p></li>
-                                <li className='text-black'><p className='text-white'>Operative</p></li>          
+                                <li className='text-black'><p className='text-white'>Scholar</p></li>
+                                <li className='text-black'><p className='text-white'>Promoter</p></li>          
                                 <li className='text-black'><p className='text-white'>Chameleon</p></li>          
                             </ul>             
                         </div>
@@ -87,11 +87,11 @@ const AboutHAALO = () => {
                             <div className='bg-companyTeal h-[1px] mt-2'></div>
                             <p className='text-lg my-[0.3rem]'>Related Personas:</p>
                             <ul className='list-disc ml-[1rem]'>
-                                <li className='text-companyTeal'><p className='text-white'>Hustler</p></li>
-                                <li className='text-companyTeal'><p className='text-white'>Maverick</p></li>
                                 <li className='text-companyTeal'><p className='text-white'>Playmaker</p></li>
-                                <li className='text-companyTeal'><p className='text-white'>Broker</p></li>
-                                <li className='text-companyTeal'><p className='text-white'>Envoy</p></li>          
+                                <li className='text-companyTeal'><p className='text-white'>Striver</p></li>
+                                <li className='text-companyTeal'><p className='text-white'>Negotiator</p></li>
+                                <li className='text-companyTeal'><p className='text-white'>Strategist</p></li>
+                                <li className='text-companyTeal'><p className='text-white'>Interpreter</p></li>          
                                 <li className='text-companyTeal'><p className='text-white'>Mercenary</p></li>          
                             </ul>             
                         </div>                    

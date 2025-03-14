@@ -32,6 +32,7 @@ export const getPercentages = (responses) => {
 
 export const findPersona = (responses) => {
     var persona = {}
+
     
     var largestResult = -1
     var largestLetter = 'Z'
@@ -44,32 +45,34 @@ export const findPersona = (responses) => {
             largestResult = percentages[letter]
         }
     }
+
     
     switch (largestLetter) {
         case 'A':
             persona = findPersonaForA(percentages)
             break
-        case 'H':
-            persona = findPersonaForH(percentages)
-            break
-        case 'C':
-            persona = findPersonaForC(percentages)
-            break
-        case 'M':
-            persona = findPersonaForM(percentages)
-            break
-        case 'X':
-            persona = findPersonaForX(percentages)
-            break
-        default:
-            console.log('No maximum')
-    }
-    return persona
-}
-
+            case 'H':
+                persona = findPersonaForH(percentages)
+                break
+                case 'C':
+                    persona = findPersonaForC(percentages)
+                    break
+                    case 'M':
+                        persona = findPersonaForM(percentages)
+                        break
+                        case 'X':
+                            persona = findPersonaForX(percentages)
+                            break
+                            default:
+                                console.log('No maximum')
+                            }
+                            return persona
+                        }
+                        
 export const findPersonaForA = (percentages) => {
+    
     if (percentages['A'] >= 0.85)
-        return personas.INNOVATOR
+        return personas.PIONEER
     
     if ((percentages['C'] > percentages['H'] &&
             percentages['C'] > percentages['M'])
@@ -91,9 +94,9 @@ export const findPersonaForA = (percentages) => {
     
     if ((percentages['H'] > percentages['C']) &&
         (percentages['H'] > percentages['M'])) {
-        return personas.SURGEON
+        return personas.NAVIGATOR
     }
-    return personas.POLITICIAN
+    return personas.DIPLOMAT
 }
 
 export const findPersonaForH = (percentages) => {
@@ -107,7 +110,7 @@ export const findPersonaForH = (percentages) => {
             (percentages['C'] > percentages['A'] && percentages['C'] === percentages['M'])
             ||
             (percentages['H'] === percentages['C'] && percentages['M'] > percentages['A'])) {
-        return personas.TRAINER
+        return personas.GUARDIAN
     }
     
     if ((percentages['M'] > percentages['C'] &&
@@ -121,7 +124,7 @@ export const findPersonaForH = (percentages) => {
     
     if (percentages['A'] > percentages['C'] &&
         percentages['A'] > percentages['M']) {
-        return personas.ANALYST
+        return personas.SCIENTIST
     }
     
     return personas.CONSULTANT
@@ -138,7 +141,7 @@ export const findPersonaForC = (percentages) => {
             (percentages['A'] > percentages['M'] && percentages['A'] > percentages['H'])
             ||
             (percentages['C'] === percentages['A'] && percentages['H'] > percentages['M'])) {
-        return personas.DELEGATE
+        return personas.CHAMPION
     }
     
     if ((percentages['H'] > percentages['A'] &&
@@ -152,14 +155,14 @@ export const findPersonaForC = (percentages) => {
     
     if (percentages['M'] > percentages['A'] &&
         percentages['M'] > percentages['H']) {
-        return personas.ACADEMIC
+        return personas.SCHOLAR
     }
-    return personas.OPERATIVE
+    return personas.PROMOTER
 }
 
 export const findPersonaForM = (percentages) => {
     if (percentages['M'] > 0.85) {
-        return personas.HUSTLER
+        return personas.PLAYMAKER
     }
     
     if ((percentages['A'] > percentages['H'] &&
@@ -168,7 +171,7 @@ export const findPersonaForM = (percentages) => {
             (percentages['A'] > percentages['C'] && percentages['A'] === percentages['H'])
             ||
             (percentages['M'] === percentages['A'] && percentages['C'] > percentages['H'])) {
-        return personas.MAVERICK
+        return personas.STRIVER
     }
     
     if ((percentages['H'] > percentages['A'] &&
@@ -177,13 +180,13 @@ export const findPersonaForM = (percentages) => {
                 (percentages['H'] > percentages['A'] && percentages['H'] === percentages['C'])
                 ||
                 (percentages['M'] === percentages['H'] && percentages['A'] > percentages['C'])) {
-        return personas.PLAYMAKER
+        return personas.NEGOTIATOR
     }
     if (percentages['C'] > percentages['A'] &&
         percentages['C'] > percentages['H']) {
-        return personas.BROKER
+        return personas.STRATEGIST
     }
-    return personas.ENVOY
+    return personas.INTERPRETER
 }
 
 export const findPersonaForX = (percentages) => {

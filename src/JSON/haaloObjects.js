@@ -31,7 +31,7 @@ export const MARKET = {letter: "M", name: "Market", description: "Results-orient
 }
 
 // Persona List
-export const INNOVATOR = {name: "Innovator", description: ["Ready and eager to impact the world",
+export const PIONEER = {name: "Pioneer", description: ["Ready and eager to impact the world",
                                      "Dominant personality with hyper focus",
                                      "Not afraid to challenge the status quo",
                                      "Indifferent to whether they are liked",
@@ -62,7 +62,7 @@ export const ENTREPRENEUR = {name: "Entrepreneur", description: ["Rules are help
                                      id: "41712224-e327-4828-f123-fcb92179dc08", 
                                      tagId: "fadaed31-87db-4a78-f9c2-991e7781dc08"}
 
-export const SURGEON = {name: "Surgeon", description: ["Do it yourself mindset, out to change the way the game is played",
+export const NAVIGATOR = {name: "Navigator", description: ["Do it yourself mindset, out to change the way the game is played",
                                  "Detailed and process-oriented but driven by a need to make an impact",
                                  "Willing to bet on themselves within their area of expertise",
                                  "Likes being in charge and believes in a chain of command",
@@ -71,7 +71,7 @@ export const SURGEON = {name: "Surgeon", description: ["Do it yourself mindset, 
                                  id: "e09f7891-10f8-47ef-f123-fcb92179dc08", 
                                  tagId: "07a495af-fec5-4b89-f9c2-991e7781dc08"}
 
-export const POLITICIAN = {name: "Politician", description: ["Not afraid to challenge the status quo if its beneficial",
+export const DIPLOMAT = {name: "Diplomat", description: ["Not afraid to challenge the status quo if its beneficial",
                                       "High mission orientation and eagerness to make the world better",
                                       "Hyper-aware of public perception, fears not being accepted",
                                       "Self-promoters who tend to seek the spotlight",
@@ -90,7 +90,7 @@ export const GENERAL = {name: "General", description: ["Believes experience is c
                                  id: "2523b60b-5f61-43ce-5dee-2ede2179dc08", 
                                  tagId: "80e5397e-75a7-40bc-f9c2-991e7781dc08"}
 
-export const TRAINER = {name: "Trainer", description: ["Cares deeply about others and seeks to provide support",
+export const GUARDIAN = {name: "Guardian", description: ["Cares deeply about others and seeks to provide support",
                                  "Great at aiding and onboarding new colleagues",
                                  "Prefers to blend in rather than stand out for their work",
                                  "Fears being isolated or underappreciated",
@@ -108,7 +108,7 @@ export const CLOSER = {name: "Closer", description: ["Loves a list of tasks they
                                id: "af703597-c950-4b34-5dee-2ede2179dc08", 
                                tagId: "c5b3e055-f456-456b-f9c2-991e7781dc08"}
 
-export const ANALYST = {name: "Analyst", description: ["Eager to support a leader with a compelling vision",
+export const SCIENTIST = {name: "Scientist", description: ["Eager to support a leader with a compelling vision",
                                  "Fiercely loyal with a willingness to follow orders",
                                  "Strong sense of ownership and willing to take the hit for their leader",
                                  "Loves knowing that others depend on their specific contribution",
@@ -139,7 +139,7 @@ export const CAPTAIN = {name: "Captain", description: ["Comfortable working in a
                                  id: "fa02a5fe-ac48-48bf-397b-2cde2179dc08", 
                                  tagId: "21c0b5d8-5a82-4452-f522-9c1e7781dc08"}
 
-export const DELEGATE = {name: "Delegate", description: ["Active listener but quick to make suggestions",
+export const CHAMPION = {name: "Champion", description: ["Active listener but quick to make suggestions",
                                   "Fiercely loyal and will support friends or colleagues at all costs",
                                   "Great at pulling people together to rally behind a cause",
                                   "Low ego coupled with high empathy makes this person vulnerable to manipulation",
@@ -158,7 +158,7 @@ export const COUNSELOR = {name: "Counselor", description: ["Soft-spoken and adap
                                      id: "9b4cb239-8f4f-469a-7f15-bcb44a70dc08",
                                      tagId: "abf3fc64-15ff-43a5-f522-9c1e7781dc08"}
 
-export const ACADEMIC = {name: "Academic", description: ["Seeks the comradery and safety of a team",
+export const SCHOLAR = {name: "Scholar", description: ["Seeks the comradery and safety of a team",
                                    "Looks for ways to stand out and add value to the team",
                                    "Quick to support others and lend a hand",
                                    "Never the first to take action, always observes first",
@@ -167,7 +167,7 @@ export const ACADEMIC = {name: "Academic", description: ["Seeks the comradery an
                                    id: "2eafc0a2-1d04-45a1-1118-daec2179dc08", 
                                    tagId: "8e748771-9cac-4047-2e40-971e7781dc08"}
 
-export const OPERATIVE = {name: "Operative", description: ["Highly adaptable between different cultures and environments",
+export const PROMOTER = {name: "Promoter", description: ["Highly adaptable between different cultures and environments",
                                      "Fears not having authentic connections or being in touch with themselves",
                                      "Capable of manipulation if it helps the cause",
                                      "Good at blending into a crowd while still making an impact",
@@ -176,7 +176,7 @@ export const OPERATIVE = {name: "Operative", description: ["Highly adaptable bet
                                      id: "c912d0a3-6096-48a5-1118-daec2179dc08", 
                                      tagId: "398897da-cefc-4a7e-2e40-971e7781dc08"}
 
-export const HUSTLER = {name: "Hustler", description: ["Obsessed with keeping score and winning",
+export const PLAYMAKER = {name: "Playmaker", description: ["Obsessed with keeping score and winning",
                                  "Leans into conflict and loves competition",
                                  "Fiery intensity and boundless energy",
                                  "Will break the rules if they think they can get away with it",
@@ -185,7 +185,7 @@ export const HUSTLER = {name: "Hustler", description: ["Obsessed with keeping sc
                                  id: "58fb55e6-9c3f-476c-ba32-c5f22179dc08", 
                                  tagId: "826202fe-e0d5-47b0-2e40-971e7781dc08"}
 
-export const MAVERICK = {name: "Maverick", description: ["Outwardly confident and driven to win",
+export const STRIVER = {name: "Striver", description: ["Outwardly confident and driven to win",
                                    "Dislikes rules and is always willing to challenge the status quo",
                                    "Embraces competition to stay interested",
                                    "Fears failure or being viewed as insignificant",
@@ -194,7 +194,7 @@ export const MAVERICK = {name: "Maverick", description: ["Outwardly confident an
                                    id: "fe0dab30-5478-47d0-5dcd-c3f72179dc08", 
                                    tagId: "c7f1ed74-176a-4ff7-f9c2-991e7781dc08"}
 
-export const PLAYMAKER = {name: "Playmaker", description: ["Will rally to hit numbers when called upon",
+export const NEGOTIATOR = {name: "Negotiator", description: ["Will rally to hit numbers when called upon",
                                      "Loves adventure and the thrill of competition",
                                      "Demonstrates poise under pressure",
                                      "Communicates directly and persuasively",
@@ -204,7 +204,7 @@ export const PLAYMAKER = {name: "Playmaker", description: ["Will rally to hit nu
                                      id: "6307f52d-f7f7-4ae7-206b-1dfd2179dc08", 
                                      tagId: "5fada88e-64ad-4bb0-a1a8-8d1e7781dc08"}
 
-export const BROKER = {name: "Broker", description: ["Desire to be on the winning side always",
+export const STRATEGIST = {name: "Strategist", description: ["Desire to be on the winning side always",
                                "Us versus them mentality, very loyal",
                                "Analyzes multiple outcomes to determine next steps",
                                "Always looking for ways to improve financial standing",
@@ -214,7 +214,7 @@ export const BROKER = {name: "Broker", description: ["Desire to be on the winnin
                                id: "08bf6d75-df23-4dac-7f67-c4012279dc08", 
                                tagId: "09666963-c06d-4abf-9c06-901e7781dc08"}
 
-export const ENVOY = {name: "Envoy", description: ["Ambitious and willing to hustle to advance themselves",
+export const INTERPRETER = {name: "Interpreter", description: ["Ambitious and willing to hustle to advance themselves",
                              "Will take on different personalities to build relationships",
                              "Strongest driving force is ability to advance",
                              "Fears being deemed obsolete by those in power",

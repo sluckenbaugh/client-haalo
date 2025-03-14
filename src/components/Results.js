@@ -15,10 +15,10 @@ const Results = ({ props }) => {
     const {persona, culture, description, percentages} = location.state
 
     const relatedPersonas = {
-        "Adhocracy": ["Innovator", "Advocate", "Entrepreneur", "Surgeon", "Politician", "Chameleon"],
-        "Hierarchy": ["General", "Trainer", "Closer", "Analyst", "Consultant", "Mercenary"],
-        "Community": ["Captain", "Delegate", "Counselor", "Academic", "Operative", "Chameleon"],
-        "Market": ["Hustler", "Maverick", "Playmaker", "Broker", "Envoy", "Mercenary"]
+        "Adhocracy": ["Pioneer", "Advocate", "Entrepreneur", "Navigator", "Diplomat", "Chameleon"],
+        "Hierarchy": ["General", "Guardian", "Closer", "Scientist", "Consultant", "Mercenary"],
+        "Community": ["Captain", "Champion", "Counselor", "Scholar", "Promoter", "Chameleon"],
+        "Market": ["Playmaker", "Striver", "Negotiator", "Strategist", "Interpreter", "Mercenary"]
     }
 
     return (

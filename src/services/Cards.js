@@ -1,49 +1,49 @@
-import Academic from "../_img/cards/v2/Academic.png"
-import Advocate from "../_img/cards/v2/Advocate.png"
-import Analyst from "../_img/cards/v2/Analyst.png"
-import Broker from "../_img/cards/v2/Broker.png"
-import Captain from "../_img/cards/v2/Captain.png"
-import Chameleon from "../_img/cards/v2/Chameleon.png"
-import Closer from "../_img/cards/v2/Closer.png"
-import Consultant from "../_img/cards/v2/Consultant.png"
-import Counselor from "../_img/cards/v2/Counselor.png"
-import Delegate from "../_img/cards/v2/Delegate.png"
-import Entrepreneur from "../_img/cards/v2/Entrepreneur.png"
-import Envoy from "../_img/cards/v2/Envoy.png"
-import General from "../_img/cards/v2/General.png"
-import Hustler from "../_img/cards/v2/Hustler.png"
-import Innovator from "../_img/cards/v2/Innovator.png"
-import Maverick from "../_img/cards/v2/Maverick.png"
-import Mercenary from "../_img/cards/v2/Mercenary.png"
-import Operative from "../_img/cards/v2/Operative.png"
-import Playmaker from "../_img/cards/v2/Playmaker.png"
-import Politician from "../_img/cards/v2/Politician.png"
-import Surgeon from "../_img/cards/v2/Surgeon.png"
-import Trainer from "../_img/cards/v2/Trainer.png"
+import Advocate from '../_img/cards/v2/Advocate.png'
+import Captain from '../_img/cards/v2/Captain.png'
+import Chameleon from '../_img/cards/v2/Chameleon.png'
+import Champion from '../_img/cards/v2/Champion.png'
+import Closer from '../_img/cards/v2/Closer.png'
+import Consultant from '../_img/cards/v2/Consultant.png'
+import Counselor from '../_img/cards/v2/Counselor.png'
+import Diplomat from '../_img/cards/v2/Diplomat.png'
+import Entrepreneur from '../_img/cards/v2/Entrepreneur.png'
+import General from '../_img/cards/v2/General.png'
+import Guardian from '../_img/cards/v2/Guardian.png'
+import Interpreter from '../_img/cards/v2/Interpreter.png'
+import Mercenary from '../_img/cards/v2/Mercenary.png'
+import Navigator from '../_img/cards/v2/Navigator.png'
+import Negotiator from '../_img/cards/v2/Negotiator.png'
+import Pioneer from '../_img/cards/v2/Pioneer.png'
+import Playmaker from '../_img/cards/v2/Playmaker.png'
+import Promoter from '../_img/cards/v2/Promoter.png'
+import Scholar from '../_img/cards/v2/Scholar.png'
+import Scientist from '../_img/cards/v2/Scientist.png'
+import Strategist from '../_img/cards/v2/Strategist.png'
+import Striver from '../_img/cards/v2/Striver.png'
 
 const Cards = {
-    Academic,
+    Scholar,
     Advocate,
-    Analyst,
-    Broker,
+    Scientist,
+    Strategist,
     Captain,
     Chameleon,
     Closer,
     Consultant,
     Counselor,
-    Delegate,
+    Champion,
     Entrepreneur,
-    Envoy,
+    Interpreter,
     General,
-    Hustler,
-    Innovator,
-    Maverick,
-    Mercenary,
-    Operative,
     Playmaker,
-    Politician,
-    Surgeon,
-    Trainer
+    Pioneer,
+    Striver,
+    Mercenary,
+    Promoter,
+    Negotiator,
+    Diplomat,
+    Navigator,
+    Guardian
 }
 
 export default Cards;
